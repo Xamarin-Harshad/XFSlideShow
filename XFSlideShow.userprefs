@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{A037BC47-8B70-4BAF-B93A-46CA55DB40C7}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XFSlideShow/Views/XFSlideShowPage.xaml.cs">
+    <Files>
+      <File FileName="XFSlideShow/Views/XamGridViewFormsPage.xaml.cs" Line="24" Column="25" />
+      <File FileName="XFSlideShow/Views/XFSlideShowPage.xaml.cs" Line="62" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.XFSlideShow.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.72A2F59F-41FB-438C-B4A3-995AEBEDAAB6">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.XFSlideShow.iOS>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XFSlideShow.Droid PreferredExecutionTarget="Android.1dc1f2fd" />
+  <MultiItemStartupConfigurations />
+</Properties>

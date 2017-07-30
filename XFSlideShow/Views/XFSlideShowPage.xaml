@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XFSlideShow.XFSlideShowPage"
+    xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    BackgroundColor="#93000000">
+    <pages:PopupPage.Animation>
+    <animations:ScaleAnimation 
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="Transparent"
+            RowSpacing="0" VerticalOptions="CenterAndExpand"
+            ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <cv:CarouselView Grid.Row="0" VerticalOptions="FillAndExpand"
+                x:Name="carouselGallery" IsEnabled="false"
+                Margin="20,10,20,10" BackgroundColor="Transparent">
+                <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame OutlineColor="White" 
+                            CornerRadius="5" 
+                            HasShadow="false"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            Padding="0">
+                            <ffimageloading:CachedImage
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                DownsampleToViewSize="true"
+                                Aspect="AspectFill"  
+                                LoadingPlaceholder="placeholder.png"
+                                ErrorPlaceholder="placeholder.png"
+                                Source="{Binding ImageUrl}"/>
+                        </Frame>
+                    </DataTemplate>
+                 </cv:CarouselView.ItemTemplate>
+            </cv:CarouselView>
+            <StackLayout Margin="20,0,20,0" Grid.Row="1"
+                BackgroundColor="Transparent"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal" HeightRequest="50">
+            <Button 
+                HorizontalOptions="StartAndExpand" 
+                BackgroundColor="Transparent"
+                VerticalOptions="Center" 
+                HeightRequest="30" 
+                WidthRequest="30" 
+                Image="ImageGalleryLeft.png"
+                Clicked="Handle_Clicked_prev"/>
+            <Button 
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="Transparent"
+                VerticalOptions="Center" 
+                HeightRequest="30" 
+                WidthRequest="30" 
+                Image="ImageGalleryClose.png"
+                Clicked="Handle_Clicked_close"/>
+            <Button 
+                HorizontalOptions="EndAndExpand" 
+                BackgroundColor="Transparent"
+                VerticalOptions="Center" 
+                HeightRequest="30" 
+                WidthRequest="30" 
+                Image="ImageGalleryRight.png"
+                Clicked="Handle_Clicked_next"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>
