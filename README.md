@@ -1,6 +1,8 @@
 ## XFSlideShow - Xamarin Forms
 =======================
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/harshadcse)
+
 XFSlideShow - Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows.
 
 ## Features
