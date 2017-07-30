@@ -5,10 +5,10 @@ XFSlideShow - Screen slides are transitions between one entire screen to another
 
 ## Features
 
-   Next
-   Prev
-   ScaleAnimation
-   Popup
+   Next</br>
+   Prev</br>
+   ScaleAnimation</br>
+   Popup</br>
 
 ## Screenshots:
 <MTMarkdownOptions output='html4'>

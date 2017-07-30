@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using XFSlideShow.ViewModels;
+using Xamarin.Forms;
 
 namespace XFSlideShow
 {
@@ -16,6 +17,8 @@ namespace XFSlideShow
             BindingContext = _viewModel;
             _selectedPos = selectedPos;
             carouselGallery.ItemsSource = _viewModel.XamMockDataList;
+            if (Device.RuntimePlatform == Device.Android)
+                carouselGallery.Position = _selectedPos;
         }
 
         void Handle_Clicked_prev(object sender, System.EventArgs e)
@@ -57,9 +60,11 @@ namespace XFSlideShow
 
         protected async override void OnAppearing()
         {
-            carouselGallery.Position = _selectedPos;
-            await Task.Delay(300);
-            base.OnAppearing();
+            if (Device.RuntimePlatform == Device.iOS){
+				carouselGallery.Position = _selectedPos;
+				await Task.Delay(300);    
+            }
+			base.OnAppearing();
         }
 
         protected override void OnDisappearing()
